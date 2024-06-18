@@ -3,8 +3,7 @@ name: Verify library & Generate documentation
 on:
   push:
     branches:
-    - main
-  pull_request:
+    - !gh-pages
 
 jobs:
   verify:
@@ -20,7 +19,7 @@ jobs:
       with:
         python-version: '3.x'
         cache: 'pip'
-    
+
     - name: Install dependencies
       run: |
         pip install -U pip
@@ -47,7 +46,7 @@ jobs:
 
     - name: Build PDF
       run: make build
-    
+
     - name: commit PDF
       run: git add . && git commit -m "[skip actions] build PDF" && git push
 
@@ -62,3 +61,4 @@ jobs:
         cp $DIR/* .
         git add . && git commit -m "build PDF" && git push
         git switch main
+
