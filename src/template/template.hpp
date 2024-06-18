@@ -13,8 +13,8 @@ array sin90 = { 0, 1, 0, -1 }, cos90 = { 1, 0, -1, 0 };
 #define rep(i, n) reps(i, 0, n)
 #define all(a) begin(a), end(a)
 #define sz(a) ssize(a)
-bool chmin(auto &&a, auto b) { return a > b && (a = b, 1); }
-bool chmax(auto &&a, auto b) { return a < b && (a = b, 1); }
+bool chmin(auto& a, auto b) { return a > b ? a = b, 1 : 0; }
+bool chmax(auto& a, auto b) { return a < b ? a = b, 1 : 0; }
 
 int main() {
    cin.tie(0)->sync_with_stdio(0);
