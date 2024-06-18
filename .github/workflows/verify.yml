@@ -3,7 +3,8 @@ name: Verify library & Generate documentation
 on:
   push:
     branches:
-    - !gh-pages
+      - '*'
+      - !gh-pages
 
 jobs:
   verify:
