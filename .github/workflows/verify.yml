@@ -30,8 +30,6 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         GH_PAT: this_token_is_never_used_but_oj_verify_requires_this
 
-    - run: git switch main
-
     - name: Set up Node.js
       uses: actions/setup-node@v4
       with:
@@ -60,5 +58,5 @@ jobs:
         git switch gh-pages
         cp $DIR/* .
         git add . && git commit -m "build PDF" && git push
-        git switch main
+        git switch ${{ github.ref_name }}
 
