@@ -2,8 +2,6 @@ name: Verify library & Generate documentation
 
 on:
   push:
-    branches:
-      - '*'
     branches-ignore:
       - gh-pages
 
