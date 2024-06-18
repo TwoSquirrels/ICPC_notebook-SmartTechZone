@@ -30,6 +30,8 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         GH_PAT: ${{ secrets.GITHUB_TOKEN }}
 
+    - run: ls -al
+
     - name: Set up Node.js
       uses: actions/setup-node@v4
       with:
