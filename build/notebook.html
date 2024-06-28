@@ -34,6 +34,7 @@
     <ol>
     <li><a href="#BIT.hpp">BIT.hpp</a></li>
     <li><a href="#FastSet.hpp">FastSet.hpp</a></li>
+    <li><a href="#pbds_set.hpp">pbds_set.hpp</a></li>
     </ol>
     <li><a class="section" href="#math">math</a></li>
     <ol>
@@ -230,6 +231,20 @@ array sin90 <span class="token operator">=</span> <span class="token punctuation
       <span class="token keyword">return</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
    <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre>
+</div>
+
+    <div class="filename">
+        <h2 id="pbds_set.hpp">pbds_set.hpp</h2>
+        md5: 379e25
+
+    </div>
+    <div class="content content-hpp">
+    <pre><code><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;ext/pb_ds/assoc_container.hpp></span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;ext/pb_ds/tree_policy.hpp></span></span>
+
+<span class="token keyword">using</span> <span class="token keyword">namespace</span> __gnu_pbds<span class="token punctuation">;</span>
+<span class="token keyword">template</span><span class="token operator">&lt;</span><span class="token keyword">typename</span> <span class="token class-name">T</span><span class="token operator">></span> <span class="token keyword">using</span> pbds_set <span class="token operator">=</span> tree<span class="token operator">&lt;</span>T<span class="token punctuation">,</span> null_type<span class="token punctuation">,</span> less<span class="token operator">&lt;</span>T<span class="token operator">></span><span class="token punctuation">,</span> rb_tree_tag<span class="token punctuation">,</span> tree_order_statistics_node_update<span class="token operator">></span><span class="token punctuation">;</span>
 </code></pre>
 </div>
 
