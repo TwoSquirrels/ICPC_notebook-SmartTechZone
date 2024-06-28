@@ -16,6 +16,9 @@ data:
     path: test/data-structure/FastSet.test.cpp
     title: test/data-structure/FastSet.test.cpp
   - icon: ':heavy_check_mark:'
+    path: test/data-structure/pbds_set.test.cpp
+    title: test/data-structure/pbds_set.test.cpp
+  - icon: ':heavy_check_mark:'
     path: test/math/BinaryGCD.test.cpp
     title: test/math/BinaryGCD.test.cpp
   - icon: ':heavy_check_mark:'
@@ -107,6 +110,7 @@ data:
   - test/modint/BarrettReduction.test.cpp
   - test/modint/modint.test.cpp
   - test/template.test.cpp
+  - test/data-structure/pbds_set.test.cpp
   - test/data-structure/FastSet.test.cpp
   - test/data-structure/BIT.test.cpp
   - test/string/Manacher.test.cpp
