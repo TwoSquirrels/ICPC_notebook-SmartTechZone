@@ -25,8 +25,8 @@ data:
     \ b) { return a > b ? a = b, 1 : 0; }\nbool chmax(auto& a, auto b) { return a\
     \ < b ? a = b, 1 : 0; }\n#line 3 \"test/data-structure/pbds_set.test.cpp\"\nusing\
     \ u64 = uint64_t;\n#line 1 \"src/data-structure/pbds_set.hpp\"\n#include <ext/pb_ds/assoc_container.hpp>\n\
-    #include <ext/pb_ds/tree_policy.hpp>\n\nusing namespace __gnu_pbds;\ntemplate\
-    \ <typename T>\nusing pbds_set = tree<T, null_type, less<T>, rb_tree_tag, tree_order_statistics_node_update>;\n\
+    #include <ext/pb_ds/tree_policy.hpp>\n\nusing namespace __gnu_pbds;\ntemplate<typename\
+    \ T> using pbds_set = tree<T, null_type, less<T>, rb_tree_tag, tree_order_statistics_node_update>;\n\
     #line 5 \"test/data-structure/pbds_set.test.cpp\"\n\nint main() {\n   cin.tie(0)->sync_with_stdio(0);\n\
     \   ll N, Q;\n   cin >> N >> Q;\n   string S;\n   cin >> S;\n   pbds_set<int>\
     \ s;\n   rep(i, 0, N) if(S[i] == '1') s.insert(i);\n   while(Q--) {\n      ll\
@@ -53,7 +53,7 @@ data:
   isVerificationFile: true
   path: test/data-structure/pbds_set.test.cpp
   requiredBy: []
-  timestamp: '2024-06-18 16:15:24+09:00'
+  timestamp: '2024-06-28 07:46:18+00:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/data-structure/pbds_set.test.cpp

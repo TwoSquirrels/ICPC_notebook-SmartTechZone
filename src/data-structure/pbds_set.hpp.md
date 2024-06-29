@@ -20,9 +20,8 @@ data:
 
     using namespace __gnu_pbds;
 
-    template <typename T>
-
-    using pbds_set = tree<T, null_type, less<T>, rb_tree_tag, tree_order_statistics_node_update>;
+    template<typename T> using pbds_set = tree<T, null_type, less<T>, rb_tree_tag,
+    tree_order_statistics_node_update>;
 
     '
   code: '#include <ext/pb_ds/assoc_container.hpp>
@@ -32,16 +31,15 @@ data:
 
     using namespace __gnu_pbds;
 
-    template <typename T>
-
-    using pbds_set = tree<T, null_type, less<T>, rb_tree_tag, tree_order_statistics_node_update>;
+    template<typename T> using pbds_set = tree<T, null_type, less<T>, rb_tree_tag,
+    tree_order_statistics_node_update>;
 
     '
   dependsOn: []
   isVerificationFile: false
   path: src/data-structure/pbds_set.hpp
   requiredBy: []
-  timestamp: '2024-05-30 21:34:56+09:00'
+  timestamp: '2024-06-28 07:46:18+00:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/data-structure/pbds_set.test.cpp
