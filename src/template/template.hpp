@@ -19,28 +19,22 @@ bool chmax(auto& a, auto b) { return a < b ? a = b, 1 : 0; }
 #define DEBUG
 
 #define DUMPOUT cerr
-void dump_func() {
-    DUMPOUT << endl;
-}
-template <class Head, class... Tail>
-void dump_func(Head &&head, Tail &&... tail) {
-    DUMPOUT << head;
-    if (sizeof...(Tail) > 0) {
-        DUMPOUT << ", ";
-    }
-    dump_func(std::move(tail)...);
+void dump_func() { DUMPOUT << endl; }
+template<class Head, class... Tail> void dump_func(Head&& head, Tail&&... tail) {
+   DUMPOUT << head;
+   if(sizeof...(Tail) > 0) { DUMPOUT << ", "; }
+   dump_func(std::move(tail)...);
 }
 #ifdef DEBUG
 #define DEB
 #define dump(...)                                                              \
-    DUMPOUT << "\033[1m\033[41m"                                               \
-            << "  " << string(#__VA_ARGS__) << ": "                            \
-            << "[" << to_string(__LINE__) << ":" << __FUNCTION__ << "]"        \
-            << endl                                                            \
-            << "\033[49m\033[0m    ",                                                         \
-        dump_func(__VA_ARGS__)
+   DUMPOUT << "\033[1m\033[41m"                                                \
+           << "  " << string(#__VA_ARGS__) << ": "                             \
+           << "[" << to_string(__LINE__) << ":" << __FUNCTION__ << "]" << endl \
+           << "\033[49m\033[0m    ",                                           \
+       dump_func(__VA_ARGS__)
 #else
-#define DEB if (false)
+#define DEB if(false)
 #define dump(...)
 #endif
 
